@@ -1,0 +1,44 @@
+﻿<!--Sayfaya gelen kisinin bilgilerini ul icinde li olarak, personelleri ise tabloya basınız.-->
+@model Master
+
+
+<h1>Veriler</h1>
+
+<ul>
+    <li>@Model.Kisi.ID</li>
+    <li>@Model.Kisi.Ad</li>
+    <li>@Model.Kisi.Soyad</li>
+</ul>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Ad</th>
+            <th>Soyad</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Personellerim)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Ad</td>
+                <td>@item.Soyad</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
